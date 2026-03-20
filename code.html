@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#C95A63",
+              "surface-bright": "#fff8f3",
+              "surface-container": "#f4ece7",
+              "on-surface": "#1e1b18",
+              "on-surface-variant": "#564242",
+              "outline-variant": "#dcc0c0",
+              "pistachio": "#CFEAC7",
+              "butter-yellow": "#F5D889",
+              "powder-pink": "#FDE2E4"
+            },
+            fontFamily: {
+              "headline": ["Fraunces"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 }
+      .bg-grain { background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A) }
+      .ceramic-shadow { box-shadow: 0 24px 40px -15px rgba(201, 90, 99, 0.1) }
+      .tinted-shadow { box-shadow: 0 15px 30px -10px rgba(91, 52, 45, 0.08) }
+      body { min-height: 100dvh; }
+      .doodle-bg {
+        background-image: radial-gradient(#C95A63 0.5px, transparent 0.5px);
+        background-size: 24px 24px;
+        opacity: 0.1;
+      }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body selection:bg-primary/20">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/20">
+<nav class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+<span class="font-headline italic text-2xl text-[#5B342D]">Faim de semaine</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-label text-xs uppercase tracking-widest text-on-surface">
+<a class="text-primary font-bold hover:opacity-80 transition-opacity" href="#">Menu</a>
+<a class="hover:opacity-80 transition-opacity" href="#">Atelier</a>
+<a class="hover:opacity-80 transition-opacity" href="#">L'Histoire</a>
+</div>
+<button class="bg-primary text-white font-label text-[10px] uppercase tracking-[0.2em] px-6 py-3 rounded-2xl active:scale-95 duration-200 shadow-lg shadow-primary/20">
+            Réserver
+        </button>
+</nav>
+</header>
+<main class="pt-20 pb-24 bg-grain">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 md:py-32 max-w-7xl mx-auto overflow-hidden">
+<!-- Hero Background Layer -->
+<div class="absolute inset-0 -z-10 bg-powder-pink/40 rounded-[4rem] m-2">
+<div class="absolute inset-0 doodle-bg"></div>
+<!-- Hand-drawn style doodles placeholders -->
+<span class="material-symbols-outlined absolute top-10 right-20 text-primary/20 text-6xl rotate-12">brush</span>
+<span class="material-symbols-outlined absolute bottom-20 left-10 text-primary/20 text-4xl -rotate-12">cherry</span>
+<span class="material-symbols-outlined absolute top-1/2 right-10 text-primary/20 text-5xl">air</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<h1 class="font-headline font-normal text-6xl md:text-8xl lg:text-9xl leading-[1] tracking-tight mb-10">
+                    Le brunch qui se vit. <br/>
+<span class="italic text-primary">Le brunch qui se peint.</span>
+</h1>
+<!-- Intent Selector -->
+<div class="flex flex-wrap gap-3 mb-10">
+<button class="bg-white px-5 py-3 rounded-full text-xs font-label font-bold uppercase tracking-wider text-on-surface border border-outline-variant/30 hover:bg-primary hover:text-white transition-all">Je viens pour bruncher</button>
+<button class="bg-white px-5 py-3 rounded-full text-xs font-label font-bold uppercase tracking-wider text-on-surface border border-outline-variant/30 hover:bg-primary hover:text-white transition-all">Je viens pour le Brunch Art</button>
+<button class="bg-white px-5 py-3 rounded-full text-xs font-label font-bold uppercase tracking-wider text-on-surface border border-outline-variant/30 hover:bg-primary hover:text-white transition-all">Je viens pour un événement</button>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mb-12">
+<button class="bg-primary text-white font-label px-12 py-5 rounded-3xl text-sm font-bold tracking-widest hover:translate-y-[-2px] transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3">
+                        RÉSERVER
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary font-label px-12 py-5 rounded-3xl text-sm font-bold tracking-widest hover:bg-primary/5 transition-all flex items-center justify-center gap-3">
+                        VOIR LA CARTE
+                    </button>
+</div>
+</div>
+<div class="relative group">
+<div class="relative rounded-[3rem] overflow-hidden aspect-[4/5] ceramic-shadow border-[16px] border-white">
+<img alt="Premium French brunch spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+<div class="absolute bottom-8 right-8 bg-pistachio text-on-surface-variant px-6 py-3 rounded-full font-label text-[10px] font-bold tracking-widest uppercase shadow-lg">
+                        Ouvert aujourd'hui
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Strip -->
+<section class="bg-white border-y border-outline-variant/20 py-12">
+<div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar">
+<div class="flex items-center justify-between min-w-[1000px] gap-8">
+<div class="flex items-center gap-3 bg-pistachio/30 px-6 py-3 rounded-2xl border border-pistachio">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Paris 11</span>
+</div>
+<div class="flex items-center gap-3 bg-butter-yellow/30 px-6 py-3 rounded-2xl border border-butter-yellow">
+<span class="material-symbols-outlined text-primary text-xl">sunny</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Brunch all day</span>
+</div>
+<div class="flex items-center gap-3 bg-pistachio/30 px-6 py-3 rounded-2xl border border-pistachio">
+<span class="material-symbols-outlined text-primary text-xl">palette</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Brunch Art sur réservation</span>
+</div>
+<div class="flex items-center gap-3 bg-butter-yellow/30 px-6 py-3 rounded-2xl border border-butter-yellow">
+<span class="material-symbols-outlined text-primary text-xl">delivery_dining</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Livraison disponible</span>
+</div>
+<div class="flex items-center gap-3 bg-pistachio/30 px-6 py-3 rounded-2xl border border-pistachio">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Safe Place</span>
+</div>
+<div class="flex items-center gap-3 bg-butter-yellow/30 px-6 py-3 rounded-2xl border border-butter-yellow">
+<span class="material-symbols-outlined text-primary text-xl">restaurant</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest">Option Halal</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3 Pillars Section -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="font-label text-primary text-xs font-bold uppercase tracking-[0.4em]">L'Univers</span>
+<h2 class="font-headline text-5xl md:text-6xl mt-4 italic">Trois façons de savourer</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="group relative bg-powder-pink/30 rounded-[3rem] p-10 pt-0 ceramic-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2">
+<div class="w-full aspect-square -mt-16 mb-10 rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform group-hover:scale-105">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">restaurant_menu</span>
+<h3 class="font-headline text-3xl mb-4 italic">Le Brunch</h3>
+<p class="text-sm leading-relaxed mb-8 opacity-70 px-4">Notre carte signature évolue au fil des saisons, privilégiant le goût et le frais.</p>
+<a class="mt-auto font-label text-[11px] uppercase font-bold tracking-[0.2em] text-primary border-b-2 border-primary pb-1" href="#">Voir la carte</a>
+</div>
+<!-- Pillar 2 -->
+<div class="group relative bg-butter-yellow/20 rounded-[3rem] p-10 pt-0 ceramic-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2">
+<div class="w-full aspect-square -mt-16 mb-10 rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform group-hover:scale-105">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">palette</span>
+<h3 class="font-headline text-3xl mb-4 italic">Le Brunch Art</h3>
+<p class="text-sm leading-relaxed mb-8 opacity-70 px-4">L'atelier créatif unique à Paris. Peignez votre toile tout en dégustant nos douceurs.</p>
+<a class="mt-auto font-label text-[11px] uppercase font-bold tracking-[0.2em] text-primary border-b-2 border-primary pb-1" href="#">Découvrir l'atelier</a>
+</div>
+<!-- Pillar 3 -->
+<div class="group relative bg-pistachio/20 rounded-[3rem] p-10 pt-0 ceramic-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2">
+<div class="w-full aspect-square -mt-16 mb-10 rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform group-hover:scale-105">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">event</span>
+<h3 class="font-headline text-3xl mb-4 italic">Les Événements</h3>
+<p class="text-sm leading-relaxed mb-8 opacity-70 px-4">Anniversaire, EVJF ou Team Building. Privatisez notre écrin pour vos moments précieux.</p>
+<a class="mt-auto font-label text-[11px] uppercase font-bold tracking-[0.2em] text-primary border-b-2 border-primary pb-1" href="#">Voir l agenda</a>
+</div>
+</div>
+</section>
+<!-- Signatures Section -->
+<section class="py-32 bg-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
+<div>
+<span class="font-label text-primary text-xs font-bold uppercase tracking-[0.4em]">Nos Incontournables</span>
+<h2 class="font-headline text-5xl md:text-6xl mt-4 italic">Les Signatures</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Signature 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 ceramic-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+<div class="absolute top-6 left-6 bg-white px-4 py-2 rounded-full font-label text-[10px] font-bold tracking-widest uppercase shadow-md">Best-seller</div>
+<div class="absolute top-6 right-6 bg-primary text-white px-4 py-2 rounded-full font-label text-[10px] font-bold tracking-widest uppercase shadow-md">Signature</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline text-3xl italic">Madame Salmone</h4>
+<span class="font-label text-lg font-bold text-primary">16,00€</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-80">Muffin frais, saumon gravlax maison, œuf poché, hollandaise onctueuse infusée au citron vert.</p>
+</div>
+</div>
+<!-- Signature 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 ceramic-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+<div class="absolute top-6 left-6 bg-pistachio text-on-surface px-4 py-2 rounded-full font-label text-[10px] font-bold tracking-widest uppercase shadow-md">Végétarien</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline text-3xl italic">Mr Avocado</h4>
+<span class="font-label text-lg font-bold text-primary">14,50€</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-80">Pain au levain, avocat écrasé, grenades, graines de courge et feta crémeuse.</p>
+</div>
+</div>
+<!-- Signature 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 ceramic-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+<div class="absolute top-6 left-6 bg-butter-yellow px-4 py-2 rounded-full font-label text-[10px] font-bold tracking-widest uppercase shadow-md">Gourmandise</div>
+</div>
+<div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline text-3xl italic">Brioche Perdue</h4>
+<span class="font-label text-lg font-bold text-primary">12,00€</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-80">Brioche beurrée, caramel beurre salé maison, fruits frais de saison et chantilly légère.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-32 bg-powder-pink/20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-20 text-center md:text-left">
+<div>
+<h2 class="font-headline text-5xl italic mb-6">La communauté s'exprime</h2>
+<div class="flex flex-wrap justify-center md:justify-start gap-8">
+<div>
+<span class="block text-4xl font-headline text-primary">25 400+</span>
+<span class="font-label text-xs uppercase tracking-widest opacity-60">sur Instagram</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div>
+<span class="block text-4xl font-headline text-primary">1 400+</span>
+<span class="font-label text-xs uppercase tracking-widest opacity-60">avis Google (4.9/5)</span>
+</div>
+</div>
+</div>
+<button class="bg-white text-primary border border-primary font-label px-10 py-5 rounded-3xl text-sm font-bold tracking-widest hover:bg-primary hover:text-white transition-all shadow-lg">
+                    SUIVRE @FAIM.DE.SEMAINE
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-8 rounded-[2rem] tinted-shadow relative">
+<span class="material-symbols-outlined text-butter-yellow absolute -top-4 -left-2 text-6xl opacity-30">format_quote</span>
+<p class="italic mb-6 text-on-surface-variant">"Un concept unique à Paris. Le brunch est délicieux et l'expérience peinture vraiment relaxante. Je recommande !"</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-powder-pink"></div>
+<span class="font-label text-xs font-bold uppercase">Marie L.</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-[2rem] tinted-shadow relative md:translate-y-8">
+<span class="material-symbols-outlined text-butter-yellow absolute -top-4 -left-2 text-6xl opacity-30">format_quote</span>
+<p class="italic mb-6 text-on-surface-variant">"Parfait pour un anniversaire entre copines. L'équipe est aux petits soins et on repart avec notre propre toile."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-pistachio"></div>
+<span class="font-label text-xs font-bold uppercase">Sarah B.</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-[2rem] tinted-shadow relative">
+<span class="material-symbols-outlined text-butter-yellow absolute -top-4 -left-2 text-6xl opacity-30">format_quote</span>
+<p class="italic mb-6 text-on-surface-variant">"Meilleur avocado toast du 11ème. Le cadre est magnifique et très inspirant. Un vrai coup de coeur."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-butter-yellow"></div>
+<span class="font-label text-xs font-bold uppercase">Julien M.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Practical Info -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="bg-surface-container rounded-[4rem] p-12 md:p-24 relative overflow-hidden flex flex-col md:flex-row gap-20 items-center">
+<div class="flex-1 space-y-10">
+<div>
+<h2 class="font-headline text-5xl italic mb-6">Venez nous voir</h2>
+<p class="font-body text-xl opacity-70">Notre havre de paix vous attend au cœur du 11ème arrondissement.</p>
+</div>
+<div class="space-y-8">
+<div class="flex items-center gap-8">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest opacity-60">Adresse</span>
+<span class="font-label text-sm uppercase tracking-widest font-bold">12 Rue de la Soif, 75011 Paris</span>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest opacity-60">Horaires</span>
+<span class="block font-label text-sm uppercase tracking-widest font-bold">Aujourd'hui : 09:00 — 18:00</span>
+<span class="text-xs opacity-50 italic">Brunch classique sans réservation</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl ceramic-shadow border-[12px] border-white">
+<img class="w-full h-full object-cover" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Sticky Action Bar -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-lg z-[100] pointer-events-none">
+<div class="bg-white/90 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl px-8 py-5 flex items-center justify-between border border-white/40 pointer-events-auto ceramic-shadow">
+<div class="flex flex-col">
+<span class="font-label text-[9px] uppercase tracking-tighter opacity-50">Prêt pour l'expérience ?</span>
+<span class="font-headline italic text-xl">Brunch Art</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-2xl font-label text-xs font-bold uppercase tracking-widest shadow-xl shadow-primary/20 transition-all active:scale-95 flex items-center gap-3">
+            RÉSERVER
+            <span class="material-symbols-outlined text-sm">event_available</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Tab Bar -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white flex justify-around items-center px-4 pb-8 pt-4 z-[110] rounded-t-[2.5rem] border-t border-outline-variant/10 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label text-[10px] uppercase tracking-wider mt-1 font-bold">Menu</span>
+</div>
+<div class="flex flex-col items-center text-on-surface-variant opacity-40">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label text-[10px] uppercase tracking-wider mt-1">Réserver</span>
+</div>
+<div class="flex flex-col items-center text-on-surface-variant opacity-40">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-label text-[10px] uppercase tracking-wider mt-1">Atelier</span>
+</div>
+</div>
+</body></html>
