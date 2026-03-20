@@ -181,18 +181,19 @@
 <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
 <div>
 <span class="font-label text-primary text-xs font-bold uppercase tracking-[0.4em]">Nos Incontournables</span>
-<h2 class="font-headline text-5xl md:text-6xl mt-4 italic">Les Signatures ✨🍽️</h2>
+<h2 id="menu-category-title" class="font-headline text-5xl md:text-6xl mt-4 italic">Les Signatures ✨🍽️</h2>
 </div>
 <div class="flex gap-4">
-<button class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<button id="menu-prev" onclick="switchMenuCategory(-1)" class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
 <span class="material-symbols-outlined">chevron_left</span>
 </button>
-<button class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<button id="menu-next" onclick="switchMenuCategory(1)" class="p-4 rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all">
 <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+<!-- Signatures Grid -->
+<div id="menu-signatures" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 <!-- Signature 1 -->
 <div class="group">
 <div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 ceramic-shadow">
@@ -303,7 +304,24 @@
 </div>
 </div>
 </div>
+<!-- Desserts Grid (hidden by default) -->
+<div id="menu-desserts" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 hidden">
 </div>
+</div>
+<script>
+const menuCategories = [
+  { id: 'menu-signatures', title: 'Les Signatures ✨🍽️' },
+  { id: 'menu-desserts', title: 'Les Desserts 🍪' }
+];
+let currentCategory = 0;
+
+function switchMenuCategory(direction) {
+  menuCategories.forEach(cat => document.getElementById(cat.id).classList.add('hidden'));
+  currentCategory = (currentCategory + direction + menuCategories.length) % menuCategories.length;
+  document.getElementById(menuCategories[currentCategory].id).classList.remove('hidden');
+  document.getElementById('menu-category-title').textContent = menuCategories[currentCategory].title;
+}
+</script>
 </section>
 <!-- Social Proof Section -->
 <section class="py-32 bg-powder-pink/20">
