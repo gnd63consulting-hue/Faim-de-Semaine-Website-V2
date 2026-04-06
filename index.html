@@ -68,10 +68,27 @@
 <!-- Hero Background Layer -->
 <div class="absolute inset-0 -z-10 bg-powder-pink/40 rounded-[4rem] m-2">
 <div class="absolute inset-0 doodle-bg"></div>
-<!-- Hand-drawn style doodles placeholders -->
-<span class="material-symbols-outlined absolute top-10 right-20 text-primary/20 text-6xl rotate-12">brush</span>
-<span class="material-symbols-outlined absolute bottom-20 left-10 text-primary/20 text-4xl -rotate-12">cherry</span>
-<span class="material-symbols-outlined absolute top-1/2 right-10 text-primary/20 text-5xl">air</span>
+<!-- Decorative SVG filigree — food & art -->
+<!-- Basil leaf -->
+<svg class="absolute top-16 right-24 w-20 h-20 rotate-12 opacity-[0.12]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 10C25 18 15 35 18 55C22 48 30 38 40 35C50 38 58 48 62 55C65 35 55 18 40 10Z" stroke="#C95A63" stroke-width="1.2" fill="none"/>
+  <path d="M40 10V55" stroke="#C95A63" stroke-width="0.8" stroke-dasharray="2 3"/>
+</svg>
+<!-- Coffee bean -->
+<svg class="absolute bottom-24 left-12 w-14 h-14 -rotate-12 opacity-[0.12]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="30" cy="30" rx="18" ry="24" stroke="#5B342D" stroke-width="1.2" transform="rotate(-20 30 30)"/>
+  <path d="M22 18C26 26 26 34 22 42" stroke="#5B342D" stroke-width="0.8"/>
+</svg>
+<!-- Brush stroke -->
+<svg class="absolute top-1/2 right-8 w-24 h-16 opacity-[0.10]" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 25C20 10 40 40 60 20C80 0 95 30 95 30" stroke="#C95A63" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M10 35C30 20 50 45 70 28" stroke="#C95A63" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+</svg>
+<!-- Avocado slice -->
+<svg class="absolute bottom-40 right-40 w-16 h-16 rotate-45 opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="30" cy="30" rx="22" ry="28" stroke="#5B342D" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="34" r="8" stroke="#5B342D" stroke-width="0.8" fill="none"/>
+</svg>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="z-10">
@@ -137,7 +154,27 @@
 </div>
 </section>
 <!-- 3 Pillars Section -->
-<section class="py-32 px-6 max-w-7xl mx-auto">
+<section class="py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
+<!-- Decorative SVG — waffle contour -->
+<svg class="absolute top-20 left-8 w-16 h-16 opacity-[0.08] rotate-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="6" y="6" width="52" height="52" rx="6" stroke="#C95A63" stroke-width="1"/>
+  <line x1="6" y1="24" x2="58" y2="24" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="6" y1="40" x2="58" y2="40" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="24" y1="6" x2="24" y2="58" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="40" y1="6" x2="40" y2="58" stroke="#C95A63" stroke-width="0.6"/>
+</svg>
+<!-- Decorative SVG — paint splatter -->
+<svg class="absolute bottom-32 right-12 w-20 h-20 opacity-[0.08]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="14" stroke="#5B342D" stroke-width="0.8" fill="none"/>
+  <circle cx="28" cy="24" r="5" stroke="#5B342D" stroke-width="0.6" fill="none"/>
+  <circle cx="56" cy="30" r="3" stroke="#5B342D" stroke-width="0.6" fill="none"/>
+  <circle cx="50" cy="58" r="4" stroke="#5B342D" stroke-width="0.6" fill="none"/>
+  <circle cx="22" cy="52" r="2.5" stroke="#5B342D" stroke-width="0.6" fill="none"/>
+</svg>
+<!-- Decorative SVG — artistic line -->
+<svg class="absolute top-1/2 -left-4 w-12 h-40 opacity-[0.06]" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 5C6 20 14 35 10 50C6 65 14 75 10 75" stroke="#C95A63" stroke-width="1" stroke-linecap="round" fill="none"/>
+</svg>
 <div class="text-center mb-24">
 <span class="font-label text-primary text-xs font-bold uppercase tracking-[0.4em]">L'Univers</span>
 <h2 class="font-headline text-5xl md:text-6xl mt-4 italic">Trois façons de savourer</h2>
@@ -240,7 +277,21 @@
 </div>
 </section>
 <!-- Social Proof Section -->
-<section class="py-32 bg-powder-pink/20">
+<section class="py-32 bg-powder-pink/20 relative overflow-hidden">
+<!-- Decorative SVG — coffee bean -->
+<svg class="absolute top-16 right-16 w-12 h-12 rotate-[25deg] opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="30" cy="30" rx="18" ry="24" stroke="#C95A63" stroke-width="1" transform="rotate(-20 30 30)"/>
+  <path d="M22 18C26 26 26 34 22 42" stroke="#C95A63" stroke-width="0.7"/>
+</svg>
+<!-- Decorative SVG — basil leaf -->
+<svg class="absolute bottom-20 left-16 w-16 h-16 -rotate-[15deg] opacity-[0.08]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 12C27 20 18 36 20 54C24 47 32 39 40 36C48 39 56 47 60 54C62 36 53 20 40 12Z" stroke="#5B342D" stroke-width="1" fill="none"/>
+  <path d="M40 12V54" stroke="#5B342D" stroke-width="0.6" stroke-dasharray="2 3"/>
+</svg>
+<!-- Decorative SVG — brush stroke -->
+<svg class="absolute top-1/3 left-8 w-10 h-32 opacity-[0.06]" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 5C8 20 16 40 10 55C4 70 12 75 14 75" stroke="#C95A63" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+</svg>
 <div class="max-w-7xl mx-auto px-6">
 <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-20 text-center md:text-left">
 <div>
@@ -304,7 +355,7 @@
 </div>
 <div>
 <span class="block font-label text-[10px] uppercase tracking-widest opacity-60">Adresse</span>
-<span class="font-label text-sm uppercase tracking-widest font-bold">12 Rue de la Soif, 75011 Paris</span>
+<span class="font-label text-sm uppercase tracking-widest font-bold">34 Rue Léon Frot, 75011 Paris</span>
 </div>
 </div>
 <div class="flex items-center gap-8">
@@ -313,14 +364,15 @@
 </div>
 <div>
 <span class="block font-label text-[10px] uppercase tracking-widest opacity-60">Horaires</span>
-<span class="block font-label text-sm uppercase tracking-widest font-bold">Aujourd'hui : 09:00 — 18:00</span>
-<span class="text-xs opacity-50 italic">Brunch classique sans réservation</span>
+<span class="block font-label text-sm uppercase tracking-widest font-bold">Mar — Dim : 09:00 — 18:00</span>
+<span class="block font-label text-sm uppercase tracking-widest font-bold opacity-60">Lundi : Fermé</span>
+<span class="text-xs opacity-50 italic">Brunch classique sans réservation · Brunch Art sur réservation</span>
 </div>
 </div>
 </div>
 </div>
 <div class="flex-1 w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl ceramic-shadow border-[12px] border-white">
-<img class="w-full h-full object-cover" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A"/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.5!2d2.3875!3d48.8525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67209a6a867e7%3A0x4a5e3a0e2f3b1c2d!2s34+Rue+L%C3%A9on+Frot%2C+75011+Paris!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Faim de Semaine - 34 Rue Léon Frot, 75011 Paris"></iframe>
 </div>
 </div>
 </section>
