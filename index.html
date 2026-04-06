@@ -33,7 +33,10 @@
     </script>
 <style>
       .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 }
-      .bg-grain { background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAuuvrsOs5BKpcZz9n5cmmttSRxQHD7M4u0Tu5W_9QXQzOfaGu6_Fjf6ezuJ3GUBd_WniYrM5n7aJ_mpwqLDNgLOgBdnmkxj5uJiKUKayLl4Nl3nyFe4pYUqeSIBjY21bQI5eiKrOPw19guZ7U7kLUhiWRYxGxYZQ81uak5h-y-PCiK8szAut5KaUKRbJGhH9zhyX9QKHKvuL0MQGEoCOAi2zjP6MVD69jkZkQND8v1YNoAftNZg_qeR67YtX3J2UOTN_7RjNdT5A) }
+      .bg-grain {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        background-color: #fff8f3;
+      }
       .ceramic-shadow { box-shadow: 0 24px 40px -15px rgba(201, 90, 99, 0.1) }
       .tinted-shadow { box-shadow: 0 15px 30px -10px rgba(91, 52, 45, 0.08) }
       body { min-height: 100dvh; }
@@ -64,28 +67,32 @@
 </header>
 <main class="pt-20 pb-24 bg-grain">
 <!-- Hero Section -->
-<section class="relative px-6 py-12 md:py-32 max-w-7xl mx-auto overflow-hidden">
+<section class="relative px-6 py-12 md:py-32 max-w-7xl mx-auto overflow-visible">
 <!-- Hero Background Layer -->
 <div class="absolute inset-0 -z-10 bg-powder-pink/40 rounded-[4rem] m-2">
 <div class="absolute inset-0 doodle-bg"></div>
-<!-- Decorative SVG filigree — food & art -->
-<svg class="absolute top-16 right-24 w-20 h-20 rotate-12 opacity-[0.12]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div>
+<!-- Decorative SVGs — Hero: 2 left of text, 2 right of photo -->
+<!-- Left top: basil leaf -->
+<svg class="absolute top-24 -left-6 w-16 h-16 -rotate-12 opacity-[0.12] z-0 hidden lg:block" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M40 10C25 18 15 35 18 55C22 48 30 38 40 35C50 38 58 48 62 55C65 35 55 18 40 10Z" stroke="#C95A63" stroke-width="1.2" fill="none"/>
   <path d="M40 10V55" stroke="#C95A63" stroke-width="0.8" stroke-dasharray="2 3"/>
 </svg>
-<svg class="absolute bottom-24 left-12 w-14 h-14 -rotate-12 opacity-[0.12]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Left bottom: coffee bean -->
+<svg class="absolute bottom-32 -left-4 w-12 h-12 rotate-[20deg] opacity-[0.10] z-0 hidden lg:block" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="30" cy="30" rx="18" ry="24" stroke="#5B342D" stroke-width="1.2" transform="rotate(-20 30 30)"/>
   <path d="M22 18C26 26 26 34 22 42" stroke="#5B342D" stroke-width="0.8"/>
 </svg>
-<svg class="absolute top-1/2 right-8 w-24 h-16 opacity-[0.10]" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Right top: brush stroke -->
+<svg class="absolute top-20 -right-8 w-20 h-14 opacity-[0.10] z-0 hidden lg:block" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M5 25C20 10 40 40 60 20C80 0 95 30 95 30" stroke="#C95A63" stroke-width="1.5" stroke-linecap="round" fill="none"/>
   <path d="M10 35C30 20 50 45 70 28" stroke="#C95A63" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.6"/>
 </svg>
-<svg class="absolute bottom-40 right-40 w-16 h-16 rotate-45 opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Right bottom: avocado slice -->
+<svg class="absolute bottom-24 -right-6 w-14 h-14 rotate-45 opacity-[0.10] z-0 hidden lg:block" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="30" cy="30" rx="22" ry="28" stroke="#5B342D" stroke-width="1" fill="none"/>
   <circle cx="30" cy="34" r="8" stroke="#5B342D" stroke-width="0.8" fill="none"/>
 </svg>
-</div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="z-10">
 <h1 class="font-headline font-normal text-6xl md:text-8xl lg:text-9xl leading-[1] tracking-tight mb-10">
@@ -150,24 +157,33 @@
 </div>
 </section>
 <!-- 3 Pillars Section -->
-<section class="py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
-<!-- Decorative SVG — waffle contour -->
-<svg class="absolute top-20 left-8 w-16 h-16 opacity-[0.08] rotate-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<section class="py-32 px-6 max-w-7xl mx-auto relative overflow-visible">
+<!-- Decorative SVGs — Pillars: 2 bottom-left, 2 bottom-right -->
+<!-- Bottom-left: waffle contour -->
+<svg class="absolute bottom-16 -left-6 w-14 h-14 opacity-[0.10] rotate-6 hidden lg:block" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="6" y="6" width="52" height="52" rx="6" stroke="#C95A63" stroke-width="1"/>
   <line x1="6" y1="24" x2="58" y2="24" stroke="#C95A63" stroke-width="0.6"/>
   <line x1="6" y1="40" x2="58" y2="40" stroke="#C95A63" stroke-width="0.6"/>
   <line x1="24" y1="6" x2="24" y2="58" stroke="#C95A63" stroke-width="0.6"/>
   <line x1="40" y1="6" x2="40" y2="58" stroke="#C95A63" stroke-width="0.6"/>
 </svg>
-<svg class="absolute bottom-32 right-12 w-20 h-20 opacity-[0.08]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Bottom-left 2: paint splatter -->
+<svg class="absolute bottom-40 left-4 w-12 h-12 opacity-[0.08] hidden lg:block" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="40" cy="40" r="14" stroke="#5B342D" stroke-width="0.8" fill="none"/>
   <circle cx="28" cy="24" r="5" stroke="#5B342D" stroke-width="0.6" fill="none"/>
   <circle cx="56" cy="30" r="3" stroke="#5B342D" stroke-width="0.6" fill="none"/>
-  <circle cx="50" cy="58" r="4" stroke="#5B342D" stroke-width="0.6" fill="none"/>
-  <circle cx="22" cy="52" r="2.5" stroke="#5B342D" stroke-width="0.6" fill="none"/>
 </svg>
-<svg class="absolute top-1/2 -left-4 w-12 h-40 opacity-[0.06]" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Bottom-right: artistic line -->
+<svg class="absolute bottom-12 -right-4 w-10 h-28 opacity-[0.08] hidden lg:block" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10 5C6 20 14 35 10 50C6 65 14 75 10 75" stroke="#C95A63" stroke-width="1" stroke-linecap="round" fill="none"/>
+</svg>
+<!-- Bottom-right 2: pomegranate -->
+<svg class="absolute bottom-44 -right-6 w-14 h-14 opacity-[0.10] -rotate-12 hidden lg:block" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="30" cy="32" r="18" stroke="#C95A63" stroke-width="1" fill="none"/>
+  <path d="M26 8C28 14 32 14 34 8" stroke="#C95A63" stroke-width="0.8" fill="none"/>
+  <circle cx="24" cy="30" r="4" stroke="#C95A63" stroke-width="0.5" fill="none" opacity="0.6"/>
+  <circle cx="36" cy="28" r="3.5" stroke="#C95A63" stroke-width="0.5" fill="none" opacity="0.6"/>
+  <circle cx="30" cy="38" r="4" stroke="#C95A63" stroke-width="0.5" fill="none" opacity="0.6"/>
 </svg>
 <div class="text-center mb-24">
 <span class="font-label text-primary text-xs font-bold uppercase tracking-[0.4em]">L'Univers</span>
@@ -397,17 +413,30 @@ function switchMenuCategory(direction) {
 </script>
 </section>
 <!-- Social Proof Section -->
-<section class="py-32 bg-powder-pink/20 relative overflow-hidden">
-<svg class="absolute top-16 right-16 w-12 h-12 rotate-[25deg] opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<section class="py-32 bg-powder-pink/20 relative overflow-visible">
+<!-- Decorative SVGs — Testimonials: 3 above cards, 2 below -->
+<!-- Above left: coffee bean -->
+<svg class="absolute top-[45%] left-6 w-10 h-10 rotate-[25deg] opacity-[0.12]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="30" cy="30" rx="18" ry="24" stroke="#C95A63" stroke-width="1" transform="rotate(-20 30 30)"/>
   <path d="M22 18C26 26 26 34 22 42" stroke="#C95A63" stroke-width="0.7"/>
 </svg>
-<svg class="absolute bottom-20 left-16 w-16 h-16 -rotate-[15deg] opacity-[0.08]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M40 12C27 20 18 36 20 54C24 47 32 39 40 36C48 39 56 47 60 54C62 36 53 20 40 12Z" stroke="#5B342D" stroke-width="1" fill="none"/>
-  <path d="M40 12V54" stroke="#5B342D" stroke-width="0.6" stroke-dasharray="2 3"/>
+<!-- Above center: brush stroke -->
+<svg class="absolute top-[42%] left-1/2 -translate-x-1/2 w-16 h-10 opacity-[0.08]" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 30C25 10 45 40 65 20C85 5 95 25 95 25" stroke="#5B342D" stroke-width="1.2" stroke-linecap="round" fill="none"/>
 </svg>
-<svg class="absolute top-1/3 left-8 w-10 h-32 opacity-[0.06]" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Above right: basil leaf -->
+<svg class="absolute top-[44%] right-8 w-12 h-12 rotate-12 opacity-[0.10]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 12C27 20 18 36 20 54C24 47 32 39 40 36C48 39 56 47 60 54C62 36 53 20 40 12Z" stroke="#C95A63" stroke-width="1" fill="none"/>
+  <path d="M40 12V54" stroke="#C95A63" stroke-width="0.6" stroke-dasharray="2 3"/>
+</svg>
+<!-- Below left: artistic curve -->
+<svg class="absolute bottom-8 left-10 w-10 h-28 opacity-[0.08]" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 5C8 20 16 40 10 55C4 70 12 75 14 75" stroke="#C95A63" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+</svg>
+<!-- Below right: avocado slice -->
+<svg class="absolute bottom-10 right-12 w-12 h-12 -rotate-[20deg] opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="30" cy="30" rx="22" ry="28" stroke="#5B342D" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="34" r="8" stroke="#5B342D" stroke-width="0.8" fill="none"/>
 </svg>
 <div class="max-w-7xl mx-auto px-6">
 <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-20 text-center md:text-left">
@@ -457,6 +486,22 @@ function switchMenuCategory(direction) {
 </div>
 </div>
 </section>
+<!-- Decorative SVGs — Bottom of page: 2 between sections -->
+<div class="relative max-w-7xl mx-auto px-6 h-0 overflow-visible hidden lg:block">
+<!-- Bottom left: waffle contour -->
+<svg class="absolute -top-12 left-4 w-14 h-14 rotate-[15deg] opacity-[0.10]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="6" y="6" width="52" height="52" rx="6" stroke="#C95A63" stroke-width="1"/>
+  <line x1="6" y1="24" x2="58" y2="24" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="6" y1="40" x2="58" y2="40" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="24" y1="6" x2="24" y2="58" stroke="#C95A63" stroke-width="0.6"/>
+  <line x1="40" y1="6" x2="40" y2="58" stroke="#C95A63" stroke-width="0.6"/>
+</svg>
+<!-- Bottom right: coffee bean -->
+<svg class="absolute -top-10 right-6 w-12 h-12 -rotate-[25deg] opacity-[0.10]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="30" cy="30" rx="18" ry="24" stroke="#5B342D" stroke-width="1.2" transform="rotate(-20 30 30)"/>
+  <path d="M22 18C26 26 26 34 22 42" stroke="#5B342D" stroke-width="0.8"/>
+</svg>
+</div>
 <!-- Practical Info -->
 <section class="py-32 px-6 max-w-7xl mx-auto">
 <div class="bg-surface-container rounded-[4rem] p-12 md:p-24 relative overflow-hidden flex flex-col md:flex-row gap-20 items-center">
